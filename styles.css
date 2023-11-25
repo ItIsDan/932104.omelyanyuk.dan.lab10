@@ -1,0 +1,60 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100vh;
+}
+
+body {
+    font-family: Arial;
+}
+
+.wrapper {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    min-height: 100vh;
+    position: relative;
+    background-color: #000000;
+}
+
+.img img {
+    width: 100%;
+    height: 100%;
+}
+
+.background {
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    background-image: url("background.jpg");
+    background-size: cover;
+    background-position: bottom;
+    transition: transform 0.2s ease;
+    z-index: 100;
+}
+
+.background:hover {
+    transform: translateY(-5%);
+}
+
+.background.remove {
+    transition: transform 1s ease;
+    transform: translateY(-100%);
+}
+
+.objects {
+    display: grid;
+    gap: 100px;
+}
+
+.objects__figures {
+    display: none;
+}
+
+
+
+
