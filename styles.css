@@ -33,7 +33,7 @@ body {
     background-image: url("background.jpg");
     background-size: cover;
     background-position: bottom;
-    transition: transform 0.2s ease;
+    transition: transform 0.6s ease-out;
     z-index: 100;
 }
 
@@ -100,6 +100,41 @@ body {
     z-index: 10;
 }
 
+.lamp__hang {
+    position: absolute;
+    top: 68px;
+    left: 117px;
+    width: 15px;
+    height: 65px;
+    background-color: #000;
+    transition: height 0.3s ease-out;
+}
+
+.lamp__hang:before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: calc(50% - 1px);
+    width: 2px;
+    height: 100%;
+    border-radius: 50%;
+    background-color: grey;
+}
+
+.lamp__hang:after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: calc(50% - 5px);
+    width: 10px;
+    height: 10px;
+    border-radius: 50%;
+    background-color: goldenrod;
+}
+
+.lamp__image.mousedown .lamp__hang {
+    height: 75px;
+}
 
 .objects__figures {
     display: none;
@@ -132,7 +167,7 @@ body {
     top: 20%;
     visibility: visible;
     opacity: 0.5;
-    transition: all 0.5s ease;
+    transition: all 0.5s ease-in-out;
     z-index: 10;
 }
 
